@@ -1,0 +1,43 @@
+.cadastrar_produto {
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 80px;
+    color: black;
+    text-decoration: none;
+}
+
+.my_products:hover,
+.catalogo:hover {
+    cursor: pointer;
+    color: black;
+    text-shadow: 1px 1px 1px rgb(104, 104, 214);
+}
+
+.my_products,
+.catalogo,
+.options {
+    color: grey !important;
+    text-decoration: none;
+}
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: end;
+}
+
+.inside-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
