@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../4. Catalogo/style.css">
+
     <title>Cadastro de Produto</title>
 </head>
 <body>
@@ -24,6 +26,7 @@
         <br><br>
         <input type="number" name="id_usuario" value="<?php if(isset($_POST["id_usuario"])) echo $_POST["id_usuario"];?>" style="display:none;">
         <button type="submit">Enviar</button>
+        <br><br>
     </form>
 </body>
 </html>

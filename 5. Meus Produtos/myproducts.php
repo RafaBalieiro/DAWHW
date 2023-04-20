@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../4. Catalogo/style.css">
 </head>
 <body>
     <?php
@@ -46,6 +46,8 @@
             header("Refresh:0");
         }
 
+        $titulo= "Meus Produtos";
+
         include "../cabecalho.php";
 
         if ($nome == null){
@@ -59,8 +61,8 @@
 
     ?>
     <main class="Main">
-    <h1 class="options"><a href="catalogo.php" class="catalogo">Catálogo</a>/<a href="../5. Meus Produtos/myproducts.php" class="my_products" >Meus Produtos</a></h1>
-    <div style ="display: flex; gap: 10px; justify-content:center">
+    <section  class="catalogo">
+    <div class="products-grid" >
     <?php
         include "../9. Api/produto.php";
 
@@ -69,31 +71,34 @@
         get_produtosByUserId($usuarios, $id_usuario);
         foreach($usuarios as $value_usuario){    
 ?>
-        <div style = "display: flex; gap:20px;flex-direction: column;background-color: white;box-shadow: 2px 2px 2px 2px black;border-radius: 10px;padding: 20px;justify-content: top;align-items: center;">
-            <h3><?=$value_usuario["name"] ?></h3>
+        <div class="product">
             <img src = "../4. Catalogo/img/<?=$value_usuario["imagem_url"]?>" width = "200px"> 
-            <!-- <div>
-                <button
-                    <?php
-                        if($value_usuario["interesse"] == 0){
-                            echo "style = 'background-color: green; color: white'> Tenho Interesse";
-                        }
-                        else {
-                            echo "style = 'background-color: red; color: white'> Não tenho interesse";
-                        }
-                    ?>
-                </button>
-            </div> -->
+            <div class="product-content">
+                <h3><?=$value_usuario["name"] ?></h3>
+                <p><?=$value_usuario["descricao"] ?></p>
+            </div>
         </div>        
 <?php
         }
 ?>
     </div>  
+    <div class="pagination-container">
+        <div class="pagination">
+            <i class="fa-solid fa-left-long"></i>
+            <button class="btn1">Anterior</button>
+            <ul class="pagination-list">
+                <li class="link" value="1">1</li>
+                <li class="link" value="2">2</li>
+                <li class="link" value="3">3</li>
+                <li class="link" value="4">4</li>
+                <li class="link" value="5">5</li>
+                <li class="link" value="6">6</li>
+            </ul>
+            <button class="btn2">Próximo</button>
+            <i class="fa-solid fa-right-long"></i>
+        </div>
+    </div>
+    </section>
     <br><br><br>
-    <form action="../6. Cadastro de Produtos/cadastrar_produto.php" method = "post">
-        <input type="number" name="id_usuario" id="id_usuario" value="<?=$_COOKIE["id_usuario"]?>" style="display:none;">
-        <button type="submit" class = "cadastrar_produto">Cadastrar Produto</button>
-    </form>
-    <br><br>
 </body>
 </html>
