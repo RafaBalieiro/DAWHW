@@ -4,6 +4,10 @@
         if(isset($nome)){
             echo "<h2>Bem vindo $nome!</h2>";
         }
+
+        if(isset($titulo)){
+            echo "<h2>$titulo</h2>";
+        }
     ?>
     <h2>Escambo DAW</h2>
 
