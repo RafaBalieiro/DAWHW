@@ -7,7 +7,9 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background: url("/DAWHW-master/4. Catalogo/img/radiant-gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section {
@@ -27,7 +29,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--secundary-color);
+  border-bottom: 2px solid #cccccc62;
 }
 
 .logo {
@@ -52,7 +54,7 @@ section {
   content: "";
   height: 3px;
   width: 0;
-  background: var(--logo-icon-color);
+  background: var(--secundary-color);
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -70,14 +72,14 @@ section {
   font-weight: 600;
   color: #080e1d;
   padding: 0.7rem;
-  border: solid 2px var(--logo-icon-color);
+  border: solid 2px var(--secundary-color);
   border-radius: 10px;
   transition: 0.5s ease-in;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--logo-icon-color);
+  background-color: var(--secundary-color);
   color: white;
 }
 
@@ -85,7 +87,7 @@ section {
 
 .banner {
   width: 700px;
-  margin: 0 auto;
+  margin: 2rem auto;
   justify-content: center;
   text-align: center;
 }
@@ -102,24 +104,53 @@ section {
   color: var(--secundary-color);
 }
 
-.banner i {
-  font-size: 15rem;
+.banner .apresentation .logo {
+  font-size: 10rem;
   margin: 1.5rem;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  padding: 3rem;
+  background-color: var(--secundary-color);
 }
 
 .banner p {
   font-size: 1.4rem;
 }
 
+.banner .selos {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+}
+
+.banner .selos i {
+  font-size: 2rem;
+  padding: 0.1rem;
+}
+
+.banner .selos p {
+  font-size: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
 .catalogo {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .catalogo h2 {
   font-size: 2.5rem;
-  text-decoration: underline;
 }
 
 .catalogo .filter {
@@ -145,7 +176,7 @@ input[type="checkbox"] {
 }
 
 input:checked[type="checkbox"] {
-  background: var(--logo-icon-color);
+  background: var(--secundary-color);
 }
 
 input[type="checkbox"]:before {
@@ -167,17 +198,19 @@ input:checked[type="checkbox"]:before {
 }
 
 .catalogo .products-grid {
+  max-width: 1200px;
   margin-top: 2rem;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .catalogo .products-grid .product {
   min-width: 250px;
   width: 23%;
   padding: 10px 12px;
-  border: 1px solid var(--secundary-color);
+  border: 2px solid var(--secundary-color);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -200,23 +233,16 @@ input:checked[type="checkbox"]:before {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(4, 217, 178, 0.4);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--logo-icon-color);
+  color: var(--text-color);
   font-weight: 700;
   padding: 0 10px;
-  width: 70%;
   margin-top: 7rem;
 }
 
 .pagination i {
   padding: 0 1rem;
   font-size: 2rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   text-shadow: 1px 1px var(--text-color);
 }
 .pagination .pagination-list {
@@ -226,7 +252,6 @@ input:checked[type="checkbox"]:before {
 .pagination .pagination-list li {
   display: inline-block;
   margin: 0 10px;
-  background: var(--primary-color);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -237,6 +262,12 @@ input:checked[type="checkbox"]:before {
   cursor: pointer;
 }
 
+ul li.active {
+  color: var(--primary-color);
+  background-color: var(--secundary-color);
+  background-repeat: no-repeat;
+}
+
 .btn1,
 .btn2 {
   display: inline-flex;
@@ -244,11 +275,26 @@ input:checked[type="checkbox"]:before {
   font-size: 20px;
   font-weight: 700;
   text-shadow: 1px 1px var(--text-color);
-  color: var(--primary-color);
+  color: var(--text-color);
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+/* ======== FOOTER ======== */
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 6rem;
+  border-top: 2px solid #cccccc62;
+}
+
+footer p {
+  font-weight: 600;
 }
 
 /* RAYAN CSS */
