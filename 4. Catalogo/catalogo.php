@@ -20,15 +20,30 @@
 
 <body>
     <?php
-    
+
     include "../cabecalho.php";
     ?>
+
     <main class="Main">
 
-        
+        <section class="banner">
+            <div class="apresentation">
+                <h2><span>Eco</span>Escambo</h2>
+                <i class="fa-solid fa-people-carry-box logo" style="color: #f1f2f0;"></i>
+                <p>Segurança e praticidade para trocas, é no EcoEscambo! </p>
+                <div class="selos">
+                    <i class="fa-solid fa-shield-halved" style="color: #037f8c;"></i>
+                    <p>Segurança e garantias nas suas trocas!</p>
+                    <i class="fa-solid fa-comments" style="color: #037f8c;"></i>
+                    <p>Praticidade no contato!</p>
+                    <i class="fa-regular fa-thumbs-up" style="color: #037f8c;"></i>
+                    <p>Qualidade para suas trocas!</p>
+                </div>
+            </div>
+        </section>
 
         <section class="catalogo">
-            <h2>Catálogo</h2>
+            <h2>Nosso Catálogo</h2>
             <div class="filter">
                 <p>Mostrar apenas interesses</p>
                 <input type="checkbox" name="">
@@ -63,7 +78,7 @@
                 </div>
 
                 <div class="product">
-                    <img src="C:\xampp\htdocs\ProjetoDAW\DAWHW-master\4. Catalogo\img\Chocolate.jpeg" alt="">
+                    <img src="/DAWHW-master/4. Catalogo/img/MouseAli.png" alt="">
                     <div class="product-content">
                         <h3>Produto 4</h3>
                         <p>descrição aqui!</p>
@@ -111,23 +126,32 @@
             <div class="pagination-container">
                 <div class="pagination">
                     <i class="fa-solid fa-left-long"></i>
-                    <button class="btn1">Anterior</button>
+                    <button class="btn1" onclick="backBtn()">Anterior</button>
                     <ul class="pagination-list">
-                        <li class="link" value="1">1</li>
-                        <li class="link" value="2">2</li>
-                        <li class="link" value="3">3</li>
-                        <li class="link" value="4">4</li>
-                        <li class="link" value="5">5</li>
-                        <li class="link" value="6">6</li>
+                        <li class="link active" value="1" onclick="activeLink()">1</li>
+                        <li class="link" value="2" onclick="activeLink()">2</li>
+                        <li class="link" value="3" onclick="activeLink()">3</li>
+                        <li class="link" value="4" onclick="activeLink()">4</li>
+                        <li class="link" value="5" onclick="activeLink()">5</li>
+                        <li class="link" value="6" onclick="activeLink()">6</li>
                     </ul>
-                    <button class="btn2">Próximo</button>
+                    <button class="btn2" onclick="nextBtn()">Próximo</button>
                     <i class="fa-solid fa-right-long"></i>
                 </div>
             </div>
 
         </section>
 
-        <br><br>
+        <footer>
+            <div class="footer">
+                <p>Feito por Rayan Cardoso, Roberto Lencastre e Rafael Barros.</p>
+                <p>Projeto EcoEscambo - Turma 3DAW - 2023</p>
+                <p>FAETERJ - RIO</p>
+            </div>
+        </footer>
+    </main>
+    <!-- SCRIPT JS -->
+    <script src="catalogo.js"></script>
 </body>
 
 </html>
