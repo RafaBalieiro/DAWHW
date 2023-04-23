@@ -81,7 +81,15 @@
                 
             </div>
             <div style="display: flex; justify-content:center; align-items:center">
-                <button class="btn">Propor</button>
+                <form action="../8. Analise de Oferta/analise.php">
+                    <input type="text" style="display:none" value="<?=$nome_produto?>" id="name_produto_1" name="name_produto_1">
+                    <input type="text" style="display:none" value="<?=$descricao_produto?>" id="descricao_produto_1" name="descricao_produto_1">
+                    <input type="text" style="display:none" value="<?=$imagem_url_produto?>" id="imagem_produto_1" name="imagem_produto_1">
+                    <input type="text" style="display:none" value="<?=$valor_produto_usuario["name"]?>" id="name_produto_2" name="name_produto_2">
+                    <input type="text" style="display:none" value="<?=$valor_produto_usuario["descricao"]?>" id="descricao_produto_2" name="descricao_produto_2">
+                    <input type="text" style="display:none" value="<?=$valor_produto_usuario["imagem_url"]?>" id="imagem_produto_2" name="imagem_produto_2">
+                    <button class="btn" type="submit">Propor</button>
+                </form>
             </div>
         </div>
 <?php           
