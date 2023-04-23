@@ -1,0 +1,35 @@
+.none {
+    display: none;
+}
+
+.block {
+    display: flex;
+}
+
+.pop_up {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    box-shadow: 10px 10px 10px 10px black;
+    height: 50%;
+    width: 50%;
+}
+
+
+.container_2,
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_2 {
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.container h1 {
+    text-align: center;
+}

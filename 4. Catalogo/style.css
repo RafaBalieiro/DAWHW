@@ -15,6 +15,7 @@ body {
 section {
   padding-bottom: 2rem;
 }
+
 :root {
   --primary-color: #f1f2f0;
   --secundary-color: #037f8c;
@@ -44,13 +45,17 @@ section {
   position: relative;
 }
 
-.navbar ul li a {
+.navbar ul li .href {
   text-decoration: none;
+  background-color: transparent;
+  font-size: 16px;
+  border: 0;
   color: var(--text-color);
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.navbar ul li a::after {
+.navbar ul li .href::after {
   content: "";
   height: 3px;
   width: 0;
@@ -61,7 +66,7 @@ section {
   transition: 0.5s;
 }
 
-.navbar ul li a:hover::after {
+.navbar ul li .href:hover::after {
   width: 100%;
 }
 
@@ -100,6 +105,7 @@ section {
 .banner .apresentation h2 {
   font-size: 3.5rem;
 }
+
 .banner .apresentation h2 span {
   color: var(--secundary-color);
 }
@@ -107,16 +113,14 @@ section {
 .banner .apresentation .logo {
   font-size: 10rem;
   margin: 1.5rem;
-  clip-path: polygon(
-    30% 0%,
-    70% 0%,
-    100% 30%,
-    100% 70%,
-    70% 100%,
-    30% 100%,
-    0% 70%,
-    0% 30%
-  );
+  clip-path: polygon(30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%);
   padding: 3rem;
   background-color: var(--secundary-color);
 }
@@ -141,6 +145,7 @@ section {
   margin-right: 1rem;
   font-weight: 600;
 }
+
 .catalogo {
   width: 80%;
   margin: 0 auto;
@@ -149,6 +154,7 @@ section {
   display: flex;
   flex-direction: column;
 }
+
 .catalogo h2 {
   font-size: 2.5rem;
 }
@@ -245,6 +251,7 @@ input:checked[type="checkbox"]:before {
   color: var(--text-color);
   text-shadow: 1px 1px var(--text-color);
 }
+
 .pagination .pagination-list {
   margin: 20px 30px;
 }

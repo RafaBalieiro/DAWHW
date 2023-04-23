@@ -7,11 +7,10 @@
   <title>Tela de Cadastro</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <div class="container">
 
-    <form class="register-form" action="../4. Catalogo/catalogo.php" method="post">
+    <form class="register-form" action="../5. Meus Produtos/myproducts.php" method="post">
       <h2>Criar conta</h2>
       <span>Já tenho uma conta? <a href="../1. Login/login.html" class="already-login">Login</a></span>
       <br><br>
@@ -34,9 +33,10 @@
         <label for="password">Confirme a senha: </label>
         <input type="password" name="confirm-password" id="confirm-password" placeholder="Digite sua senha novamente"
           required>
+        <input type="number" style="display:none" value=1 id="isRegister" name="isRegister">
       </div>
 
-      <button type="submit">Cadastrar</button>
+      <button onClick={insertUsuario()} type="submit">Cadastrar</button>
 
     </form>
   </div>

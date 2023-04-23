@@ -14,6 +14,18 @@
             }
         }
     }
+
+    function post_user($name, $email, $senha){
+        include "connection.php";
+        $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $pdo->prepare('INSERT INTO usuario(name, email, senha) VALUES(:name,:email,:senha)');
+        $stmt->execute(array(
+            ':name' => $name,
+            ':email' => $email,
+            ':senha' => $senha
+        ));
+        header("Refresh:0");
+    }
     
     function get_validacao_byId(&$nome, &$id_usuario)
     {

@@ -66,3 +66,5 @@ function getPerId($numero_determinado){
         }
     }
 }
+
+function put_produtos
